@@ -17,12 +17,15 @@ const Introducing = () => {
                     <p className="regular">{settings.date}</p>
                 </div>
 
-                {/*
-                    <FilterOption 
-                        isReadOnly={false}
-                        text={settings.tag}
-                    />
-                */}
+                <div>
+                    {/*
+                        <FilterOption 
+                            isReadOnly={false}
+                            text={settings.tag}
+                        />
+                    */}
+                    <p>{settings.readingTime} minute reading</p>
+                </div>
             </div>
 
             <div className="content">

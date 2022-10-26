@@ -1,5 +1,22 @@
+.translateAlert {
+    padding: 8px 16px;
+    margin: 20px 0 100px;
+    background-color: #FF718A;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.43);
+    width: 20vw;
+}
+
+.translateAlert h4 {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
 .postDetailContainer {
-    padding: 100px 0 20px 0;
+    padding: 0px 0 20px 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -36,9 +53,17 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .translateAlert {
+        padding: 8px 16px;
+        margin: 40px 5% 20px;
+        width: calc(90% - 32px);
+        border-radius: 20px;
+    }
+
     .postDetailContainer {
         flex-direction: column;
-        padding: 40px 0 20px 0;
+        padding: 10px 0 20px 0;
     }
 
     .postDetailContainer .postDetailImage {

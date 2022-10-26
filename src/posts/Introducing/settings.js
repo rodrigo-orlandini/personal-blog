@@ -8,5 +8,6 @@ export default {
     description: "A quick introction to how this blog will work. 😊",
     image: image,
     renderContent: () => <Introducing />,
-    relatedTopics: []
+    relatedTopics: [],
+    readingTime: 1
 };

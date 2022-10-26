@@ -4,7 +4,7 @@ import "./styles.css"
 import "../../styles/typography.css";
 import "../../styles/global.css";
 
-const FilterOption = ({ text, option="", onFilter=()=>{}, status=true, isReadOnly=false }) => {
+const FilterOption = ({ text, option="", onFilter=()=>{}, status=true, isReadOnly=false, isClear=false }) => {
 
     return (
         <div className="filterOption">
@@ -15,7 +15,7 @@ const FilterOption = ({ text, option="", onFilter=()=>{}, status=true, isReadOnl
                         onFilter(option);
                     }
                 }}
-                className={status.toString()}
+                className={`${status.toString()} ${isClear && "clear"}`}
             >
                 <span className="navText">{text}</span>
             </button>

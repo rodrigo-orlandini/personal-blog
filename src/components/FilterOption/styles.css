@@ -24,3 +24,11 @@
     font-size: 0.75rem;
     color: white;
 }
+
+.filterOption button.clear {
+    background-color: #FF718A;
+}
+
+.filterOption button.clear:hover {
+    background-color: #D80027;
+}

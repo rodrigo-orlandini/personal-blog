@@ -6,7 +6,7 @@ import "../../styles/global.css";
 
 import FilterOption from "../FilterOption";
 
-const SearchFilter = ({ language, filters, setFilters, onSearch }) => {
+const SearchFilter = ({ language, filters, setFilters, onSearch, onClear }) => {
 
     const options = [{
         name: "automation",
@@ -41,6 +41,15 @@ const SearchFilter = ({ language, filters, setFilters, onSearch }) => {
                     key={element.name}
                 />
             ))}
+
+            <FilterOption 
+                option="clear"
+                text={language.filterClear}
+                status={true}
+                onFilter={onClear}
+                key="clear"
+                isClear={true}
+            />
         </div>
     );
 }

@@ -22,14 +22,15 @@ const PostBrief = ({ data }) => {
                             <p>{data.post.date}</p>
                         </div>
                         
-                        {data.post.tag && (
-                            <div className="postCategory">
+                        <div className="postCategory">
+                            {data.post.tag && (
                                 <FilterOption
                                     isReadOnly={true}
                                     text={data.post.tag}
                                 />
-                            </div>
-                        )}
+                            )}
+                            <p>{data.post.readingTime} minute reading</p>
+                        </div>
                     </div>
 
                     <div className="postText">

@@ -107,6 +107,7 @@ const Home = () => {
 			<div className='container'>
 				<div className='topics'>
 					<h2 className="generalTitle title">{language.topicsTitle}</h2>
+					<p>{language.topicsSub}</p>
 
 					<div className='items'>
 						<Card>

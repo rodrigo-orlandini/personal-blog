@@ -38,11 +38,15 @@ const Post = () => {
 				changeLanguage={changeLanguage}
 			/>
 
+            <div className="translateAlert">
+                <h4 className="regular">{language.translatedPosts}</h4>
+            </div>
+
             <div className="postDetailContainer">
                 <img src={content.post.image} alt="road" className="postDetailImage" />
 
                 {content.post.relatedTopics.length != 0 && (
-                    <div className="relatedTopics">
+                    <div className="relatedTopics"> 
                         <h2 className="generalTitle">{language.relatedTopics}</h2>
 
                         <ul className="regular">

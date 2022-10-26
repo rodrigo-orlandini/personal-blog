@@ -17,7 +17,7 @@ import posts from "../../posts";
 const Posts = () => {
 
     const [language, setLanguage] = useState(english);
-	const [visiblePosts, setVisiblePosts] = useState([posts[0]]);
+	const [visiblePosts, setVisiblePosts] = useState([...posts]);
 	const [filters, setFilters] = useState({
 		automation: false,
 		development: false,
@@ -40,11 +40,21 @@ const Posts = () => {
 	}
 
 	const onFilter = (option) => {
-		visiblePosts.filter((item) => {
+		setVisiblePosts(visiblePosts.filter((item) => {
 			const activeFilters = Object.keys(filters).filter((key) => option === key ? !filters[key] : filters[key]);
 
-			return activeFilters.indexOf(item.post.tag.toLowerCase()) !== -1;
+			return item.post.tag ? activeFilters.indexOf(item.post.tag.toLowerCase()) !== -1 : false;
+		}));
+	}
+
+	const onClear = () => {
+		setFilters({
+			automation: false,
+			development: false,
+			productivity: false,
+			books: false
 		});
+		setVisiblePosts([...posts])
 	}
 
     return (
@@ -66,11 +76,16 @@ const Posts = () => {
 					filters={filters}
 					setFilters={setFilters}
 					onSearch={onFilter}
+					onClear={onClear}
 				/>
 			</div>
 
 			<div className="container postsResults">
-				{visiblePosts.map((post) => <PostBrief data={post} />)}
+				{visiblePosts.length > 0 ? 
+					visiblePosts.map((post) => <PostBrief data={post} key={post.id} />) 
+				: (
+					<h4>{language.postsNotFound}</h4>
+				)}
 			</div>
 
 			<Footer />
