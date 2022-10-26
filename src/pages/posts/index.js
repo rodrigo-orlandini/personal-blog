@@ -35,7 +35,7 @@ const Posts = () => {
 
 	const onSearch = (text) => {
 		if(text.length) {
-			setVisiblePosts(posts.filter((item) => item.post.title.includes(text)));
+			setVisiblePosts(posts.filter((item) => item.post.title.toLowerCase().includes(text)));
 		}
 	}
 
