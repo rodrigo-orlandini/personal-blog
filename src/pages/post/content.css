@@ -1,0 +1,11 @@
+.contentContainer {
+    width: calc(70% - 5vw);
+    padding-left: 5vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .contentContainer {
+        width: calc(100% - 10vw);
+        padding: 0 5vw;
+    }
+}

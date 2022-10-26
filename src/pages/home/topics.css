@@ -1,0 +1,82 @@
+.topics {
+    margin-top: -100px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 30px;
+}
+
+.topics .title {
+    text-align: center;
+}
+
+.topics h2 {
+    margin: 0;
+}
+
+.topics h4 {
+    min-width: 100px;
+    text-align: center;
+}
+
+.topics .items {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.topics .items div {
+    min-width: 8rem !important;
+}
+
+.topicsImage {
+    height: 70px;
+    width: 70px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .topics .card {
+        justify-content: center;
+        padding: 12px 8px 0px;
+        text-align: center;
+    }
+
+    .topics .items div {
+        min-width: auto !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .topics .items {
+        width: 90%;
+    }
+
+    .topics .title {
+        padding: 0px 16px;
+    }
+
+    .topics .card {
+        padding: 8px;
+    }
+
+    .topics .card h4 {
+        display: none;
+    }
+
+    .topicsImage {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .topics .card {
+        padding: 4px;
+    }
+}

@@ -1,0 +1,45 @@
+.professionalExperience {
+    color: #ffffff;
+    background-color: #0052B4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobs {
+    margin: 30px 0 100px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.workImage {
+    height: 70px;
+}
+
+.jobs .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.details h4,
+.details p {
+    margin: 0;
+    text-align: center;
+}
+
+.details h4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .jobs {
+        flex-direction: column;
+    }
+
+    .details {
+        margin-bottom: 24px !important;
+    }
+}

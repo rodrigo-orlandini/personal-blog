@@ -1,0 +1,42 @@
+.postsResults {
+    height: 40vh;
+}
+
+.postsResults .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 16px;
+}
+
+.postsResults .card h3,
+.postsResults .card p {
+    margin: 0;
+}
+
+.postsResults button {
+    margin: 0;
+    transition: none;
+    background-color: #4F3BFF;
+}
+
+.postsResults button:hover {
+    cursor: auto;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    background-color: #4F3BFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .postsResults {
+        height: auto;
+        padding-top: 0;
+    }
+
+    .postsResults .card {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+    }
+}

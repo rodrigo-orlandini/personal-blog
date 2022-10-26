@@ -1,0 +1,47 @@
+.contentHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contentHeader .contentInfo h2,
+.contentHeader .contentInfo p,
+.contentHeader .filterOption button {
+    margin: 0;
+}
+
+.contentHeader .filterOption button {
+    transition: none;
+    background-color: #4F3BFF;
+}
+
+.contentHeader .filterOption button:hover {
+    cursor: auto;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    background-color: #4F3BFF;
+}
+
+.content a {
+    text-decoration: none;
+    color: #4F3BFF;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 425px) {
+    .contentHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .contentHeader .filterOption button {
+        margin-top: 12px;
+    }
+}
+

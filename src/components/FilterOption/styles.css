@@ -1,0 +1,26 @@
+.filterOption button {
+    background-color: #9487FF;
+    border: none;
+    border-radius: 100px;
+    padding: 4px 12px;
+    margin: 12px 12px 0 0px;
+    transition: all 0.2s;
+}
+
+.filterOption button.selected {
+    background-color: #4F3BFF;
+    box-shadow: 1px 4px 10px 0px rgba(0,0,0,0.43);
+}
+
+.filterOption button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s;
+    box-shadow: 1px 4px 10px 0px rgba(0,0,0,0.43);
+    background-color: #4F3BFF;
+}
+
+.filterOption button span {
+    font-size: 0.75rem;
+    color: white;
+}

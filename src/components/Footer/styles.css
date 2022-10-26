@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px !important;
+}
+
+footer .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+footer a.item:hover {
+    transform: scale(1.05);
+}
+
+footer .image {
+    margin-right: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        justify-content: space-around;
+    }
+
+    footer .regular,
+    footer div.item {
+        display: none;
+    }
+
+    footer .image {
+        height: 50px;
+        width: 50px;
+    }
+}

@@ -1,0 +1,36 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px !important;
+
+    background: radial-gradient(70% 70% at 50% 100%, #4F3BFF 0%, rgba(255, 255, 255, 0.17) 60%);
+}
+
+.intro .titleContainer {
+    display: flex;
+}
+
+.intro .title {
+    padding-right: 8px;
+}
+
+.name {
+    margin-left: 8px;
+}
+
+.profilePicture {
+    width: 300px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+    .intro .titleContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro .title {
+        margin: 0px;
+    }
+}

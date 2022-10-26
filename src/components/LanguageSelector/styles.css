@@ -1,0 +1,80 @@
+.selector {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.selectorCheckbox {
+    display: none;
+}
+
+.selectorButton {
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4F3BFF;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    padding: 6px 12px;
+    width: 190px;
+}
+
+.languageWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.languageWrapper h4 {
+    margin: 0 12px 0 8px;
+}
+
+.languageWrapper img {
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper.purple {
+    border-radius: 100px;
+    z-index: 20;
+}
+
+.wrapper.light {
+    background-color: #E5E2FF;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 20px;
+    
+    position: absolute;
+    z-index: 10;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+.selectorCheckbox:checked ~ .wrapper.light {
+    visibility: visible;
+    opacity: 1;
+
+    padding-top: 50px;
+    padding-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: auto;
+    }
+
+    .wrapper h4,
+    .wrapper .arrow {
+        display: none;
+    }
+}

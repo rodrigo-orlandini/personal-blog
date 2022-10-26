@@ -1,0 +1,52 @@
+.blogTitle {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.generalTitle {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+    letter-spacing: 0.3px;
+}
+
+.nameTitle {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: #4F3BFF;
+    letter-spacing: 0.3px;
+}
+
+.navText {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.lightRegular {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.regular {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .generalTitle {
+        font-size: 1.125rem;
+    }
+
+    .nameTitle {
+        margin: 0 1px 0 6px;
+        font-size: 1.125rem;
+    }
+}
