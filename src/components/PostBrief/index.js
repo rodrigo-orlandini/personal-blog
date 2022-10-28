@@ -12,7 +12,7 @@ const PostBrief = ({ data }) => {
         <Link to={`/post/${data.id}`} className="link">
             <Card>
                 <div className="postImage">
-                    <img src={data.post.image} alt="road"/>
+                    <img src={data.post.smallImage} alt="Post image"/>
                 </div>
 
                 <div className="postContent">

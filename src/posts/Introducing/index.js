@@ -4,8 +4,6 @@ import './styles.css';
 import "../../styles/typography.css";
 import "../../styles/global.css";
 
-import FilterOption from "../../components/FilterOption";
-
 import settings from "./settings";
 
 const Introducing = () => {		
@@ -18,12 +16,6 @@ const Introducing = () => {
                 </div>
 
                 <div>
-                    {/*
-                        <FilterOption 
-                            isReadOnly={false}
-                            text={settings.tag}
-                        />
-                    */}
                     <p>{settings.readingTime} minute reading</p>
                 </div>
             </div>

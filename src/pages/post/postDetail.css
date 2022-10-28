@@ -23,15 +23,25 @@
     justify-content: space-between;
 }
 
-.postDetailContainer .postDetailImage {
-    width: 70%;
-    min-height: 200px;
-    max-height: 40vh;
-    background-color: #D9D9D9;
+.postDetailContainer .postDetailImageContainer {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-right: 40px;
 }
 
+.postDetailContainer .postDetailImage {
+    min-height: 200px;
+    max-height: 40vh;
+}
+
+.postDetailContainer .postDetailImage.large {
+    width: 100%;
+}
+
 .relatedTopics {
+    width: 30%;
     padding: 16px;
     background-color: #E5E2FF;
     border-radius: 20px;
@@ -48,12 +58,31 @@
     padding: 0;
 }
 
-.relatedTopics li {
+.relatedTopics .link {
     padding-top: 6px;
+    color: #4F3BFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+    .relatedTopics {
+        width: calc(90% - 32px);
+        margin: 0 5vw 40px;
+    }
+
+    .postDetailContainer {
+        flex-direction: column;
+        padding: 10px 0 20px 0;
+    }
+    
+    .postDetailContainer .postDetailImageContainer {
+        margin-right: 0;
+        order: 1;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-
     .translateAlert {
         padding: 8px 16px;
         margin: 40px 5% 20px;
@@ -61,18 +90,7 @@
         border-radius: 20px;
     }
 
-    .postDetailContainer {
-        flex-direction: column;
-        padding: 10px 0 20px 0;
-    }
-
-    .postDetailContainer .postDetailImage {
+    .postDetailContainer .postDetailImage.small {
         width: 100%;
-        margin-right: 0;
-        order: 1;
-    }
-
-    .relatedTopics {
-        margin: 0 5vw 40px;
     }
 }

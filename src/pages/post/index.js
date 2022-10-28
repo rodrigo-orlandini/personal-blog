@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import './postDetail.css';
 import './content.css';
@@ -13,6 +13,8 @@ import posts from "../../posts";
 import { english, brazil } from "../../content/PostContent";
 
 const Post = () => {
+
+    const largeImages = [1];
 
     const getPost = (pathname) => {
         const id = parseInt(pathname.slice(6, pathname.length));
@@ -43,25 +45,37 @@ const Post = () => {
             </div>
 
             <div className="postDetailContainer">
-                <img src={content.post.image} alt="road" className="postDetailImage" />
+                <div className="postDetailImageContainer">
+                    <img 
+                        src={content.post.largeImage} 
+                        alt="Main image of post" 
+                        className={`postDetailImage ${largeImages.indexOf(content.id) !== -1 ? "large" : "small" }`} 
+                    />
+                </div>
 
                 {content.post.relatedTopics.length != 0 && (
                     <div className="relatedTopics"> 
                         <h2 className="generalTitle">{language.relatedTopics}</h2>
 
                         <ul className="regular">
-                            <li>{content.post.relatedTopics[0]}</li>
-                            <li>{content.post.relatedTopics[1]}</li>
-                            <li>{content.post.relatedTopics[2]}</li>
-                            <li>{content.post.relatedTopics[3]}</li>
-                            <li>{content.post.relatedTopics[4]}</li>
+                            {content.post.relatedTopics.map((item) => (
+                                <li key={item}>
+                                    <Link 
+                                        to={`/post/${item}`} 
+                                        onClick={() => setContent(getPost(`/post/${item}`))} 
+                                        className="link" 
+                                    >
+                                        {posts.filter((post) => post.id === item)[0].post.title}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 )}
             </div>
 
             <div className="contentContainer">
-                {content.post.renderContent()}
+                {content.post.renderContent(setContent)}
             </div>
 
 			<Footer />

@@ -1,7 +1,3 @@
-.postsResults {
-    height: 40vh;
-}
-
 .postsResults .card {
     display: flex;
     flex-direction: row;

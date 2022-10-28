@@ -3,7 +3,7 @@
     padding-left: 5vw;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .contentContainer {
         width: calc(100% - 10vw);
         padding: 0 5vw;

@@ -1,13 +1,15 @@
 import Introducing from ".";
-import image from "./image.jpg";
+import small from "../../assets/posts/#01-small.jpg";
+import large from "../../assets/posts/#01-large.jpg";
 
 export default {
     title: "All ideas need a start",
     date: "25/10/2022",
     tag: null,
     description: "A quick introction to how this blog will work. 😊",
-    image: image,
+    smallImage: small,
+    largeImage: large,
     renderContent: () => <Introducing />,
-    relatedTopics: [],
+    relatedTopics: [2],
     readingTime: 1
 };
