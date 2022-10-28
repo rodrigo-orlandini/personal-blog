@@ -54,6 +54,34 @@ code {
     color: #808080;
 }
 
+.testsImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.testsImages img {
+    width: 40vw;
+    margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .testsImages img {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .singleTestImage {
+        width: 90vw;
+    }
+
+    .testsImages img {
+        width: 80vw;
+    }
+}
+
 @media only screen and (max-width: 425px) {
     .contentHeader {
         display: flex;
@@ -73,6 +101,15 @@ code {
     
     .contentHeader .contentTag p {
         text-align: start;
+    }
+
+    .testsImages img {
+        width: 90vw;
+    }
+
+    pre {
+        font-size: 0.875rem;
+        padding: 12px 8px;
     }
 }
 

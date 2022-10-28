@@ -1,6 +1,6 @@
 import StartingWithNode from ".";
-import small from "../../assets/posts/#02-small.jpg";
-import large from "../../assets/posts/#02-large.jpg";
+import small from "../../assets/posts/02small.jpg";
+import large from "../../assets/posts/02large.jpg";
 
 export default {
     title: "Creating a simple CRUD API with NodeJS and Express",
@@ -11,5 +11,5 @@ export default {
     largeImage: large,
     renderContent: () => <StartingWithNode />,
     relatedTopics: [1],
-    readingTime: 1
+    readingTime: 5
 };

@@ -1,6 +1,6 @@
 import Introducing from ".";
-import small from "../../assets/posts/#01-small.jpg";
-import large from "../../assets/posts/#01-large.jpg";
+import small from "../../assets/posts/01small.jpg";
+import large from "../../assets/posts/01large.jpg";
 
 export default {
     title: "All ideas need a start",
