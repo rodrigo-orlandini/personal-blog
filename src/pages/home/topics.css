@@ -45,9 +45,7 @@
     width: 70px;
 }
 
-.topics .items, 
-.topics .items h4, 
-.topicsImage {
+.topics .disable {
     opacity: 0.5;
 }
 

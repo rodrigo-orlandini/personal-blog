@@ -11,5 +11,5 @@ export default {
     largeImage: large,
     renderContent: () => <StartingWithNode />,
     relatedTopics: [1],
-    readingTime: 5
+    readingTime: 8
 };

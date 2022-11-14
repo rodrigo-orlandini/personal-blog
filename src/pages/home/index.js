@@ -14,7 +14,7 @@ import Card from '../../components/Card';
 import ProfilePic from "../../assets/images/ProfilePic.png";
 import ReactLogo from "../../assets/images/React.png";
 import Flask from "../../assets/images/Flask.png";
-import Android from "../../assets/images/Android.png";
+import Node from "../../assets/images/Node.png";
 
 import AvailableToWork from "../../assets/images/AvailableToWork.png";
 import ZF from "../../assets/images/ZF.png";
@@ -36,6 +36,12 @@ const Home = () => {
 			setLanguage(english);
 		} else if(selected.text === "Português") {
 			setLanguage(brazil);
+		}
+	}
+
+	const goToSearch = (search) => {
+		if(search === "dev") {
+			//Implements redirect and auto filter according selection
 		}
 	}
 
@@ -73,8 +79,8 @@ const Home = () => {
 					</Card>
 
 					<Card>
-						<img src={Android} alt="Android's Logo" className="skillImage"/>
-						<h4>Kotlin<br/>Android</h4>
+						<img src={Node} alt="Node's Logo" className="skillImage"/>
+						<h4>NodeJS<br/>Express and Fastify</h4>
 					</Card>
 				</div>
 			</div>
@@ -110,24 +116,26 @@ const Home = () => {
 					<p>{language.topicsSub}</p>
 
 					<div className='items'>
+						<div onClick={() => goToSearch("dev")}>
+							<Card>
+								<img src={Development} alt="Development" className="topicsImage"/>
+								<h4>{language.topicsDevelopment}</h4> 
+							</Card>
+						</div>
+
 						<Card>
-							<img src={Development} alt="Development" className="topicsImage"/>
-							<h4>{language.topicsDevelopment}</h4> 
+							<img src={Automation} alt="Automation" className="topicsImage disable"/>
+							<h4 className='disable'>{language.topicsAutomation}</h4> 
 						</Card>
 
 						<Card>
-							<img src={Automation} alt="Automation" className="topicsImage"/>
-							<h4>{language.topicsAutomation}</h4> 
+							<img src={Productivity} alt="Productivity" className="topicsImage disable"/>
+							<h4 className='disable'>{language.topicsProductivity}</h4> 
 						</Card>
 
 						<Card>
-							<img src={Productivity} alt="Productivity" className="topicsImage"/>
-							<h4>{language.topicsProductivity}</h4> 
-						</Card>
-
-						<Card>
-							<img src={Books} alt="Books" className="topicsImage"/>
-							<h4>{language.topicsBooks}</h4> 
+							<img src={Books} alt="Books" className="topicsImage disable"/>
+							<h4 className='disable'>{language.topicsBooks}</h4> 
 						</Card>
 					</div>
 				</div>
